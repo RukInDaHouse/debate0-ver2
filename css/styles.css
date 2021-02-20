@@ -226,8 +226,82 @@ body .card .multi-button:focus-within {
 .col-7,
 .col-8,
 .col-9,
-.col-10 {
+.col-10,
+.col-11,
+.col-12,
+.col-13,
+.col-14,
+.col-15,
+.col-16,
+.col-17,
+.col-18,
+.col-19,
+.col-20,
+.col-21,
+.col-22   {
   position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+}
+
+.col-1 {
+  left: 0;
+}
+
+.col-3 {  
+  left: 20%;
+}
+.col-5 {
+  left: 40%;
+}
+
+.col-7 {
+  left: 60%;
+}
+
+.col-9 {
+  left: 80%;
+}
+
+.col-11 {
+  left: 100%;
+}
+
+.col-13 {
+  left: 120%;
+}
+
+.col-15 {
+  left: 140%;
+}
+
+.col-17 {
+  left: 160%;
+}
+
+.col-19 {
+  left: 180%;
+}
+
+.col-21 {
+  left: 200%;
+}
+
+
+.col-1,
+.col-3,
+.col-5,
+.col-7,
+.col-9,
+.col-11,
+.col-13,
+.col-15,
+.col-17,
+.col-19,
+.col-21 {
+  background: red;
 }
 
 .col-1-2,
@@ -312,4 +386,10 @@ body .card .multi-button:focus-within {
   top: 50%;
   height: 2px;
   background: #000;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
