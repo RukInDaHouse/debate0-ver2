@@ -223,19 +223,17 @@ body .card .multi-button:focus-within {
   top: 0;
   bottom: 0;
   width: 10%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
-  justify-content: center;
 }
 
-.col:nth-child(1) {
+.col {
   left: 0;
-  background: red;
 }
 
 .col:nth-child(2) {
   left: 10%;
-  background: blue;
 }
 
 .col:nth-child(3) {  
