@@ -32,7 +32,7 @@ document.body.addEventListener("click", function (e) {
         let arrow_width = distance - father.offsetWidth;
         div.innerHTML =
             father.innerHTML +
-            `<div class='arrow' style='right: ${-arrow_width}px;width:${arrow_width}px;'></div>`;
+            `<div class='arrow' style='right: ${-arrow_width}px;width:${arrow_width}px;'><div></div></div>`;
         
             var lvl = div.getElementsByClassName('lvl1')[0];
             lvl.classList.add("lvl2");
@@ -59,5 +59,7 @@ document.body.addEventListener("click", function (e) {
             lvl.classList.add("lvl3");
             lvl.classList.remove("lvl2");
             div.classList.remove("col");
+                    div.style.top = father.offsetTop + 250 + "px";
+
     }
 });
