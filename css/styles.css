@@ -50,6 +50,7 @@ body .card {
   box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.05);
   display: inline-block;
   z-index: 99999999 !important;
+  transition: all 0.3s ease;
 }
 
 body .card .multi-button {
