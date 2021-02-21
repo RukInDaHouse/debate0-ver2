@@ -388,12 +388,40 @@ body .card .multi-button:focus-within {
 .arrow {
   position: absolute;
   top: 50%;
-  height: 2px;
+  height: 10px;
   background: #000;
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+textarea:focus, input:focus
+{
+  outline: none;
 }
+
+.arrow div::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  top: -11px;
+  right: -8px;
+  background: #000;
+  transform: rotate(45deg);
+}
+.arrow div::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  top: 11px;
+  right: -8px;
+  background: #000;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  transform: rotate(-45deg);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
