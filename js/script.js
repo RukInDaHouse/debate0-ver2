@@ -71,3 +71,24 @@ document.body.addEventListener("click", function (e) {
     }
 });
 
+document.body.addEventListener("click", function (e) {
+    if (e.target.classList.contains("lvl2blue")) {
+        var div = document.createElement("div");
+        var father = e.path[5];
+        var col = document.getElementsByClassName('col')[6];
+		var content = col.getElementsByClassName('content')[0];
+			content.appendChild(div);
+        div.classList = father.classList;
+        div.innerHTML = father.innerHTML;
+        
+        var btn_upper = div.getElementsByClassName('btn2')[0];
+			btn_upper.classList.add("lvl2purple");
+			btn_upper.classList.remove("lvl1purple");
+		var btn_lower = div.getElementsByClassName('btn2')[1];
+			btn_lower.classList.add("lvl2blue");
+			btn_lower.classList.remove("lvl1blue");
+		
+		div.classList.remove("col");
+
+    }
+});
