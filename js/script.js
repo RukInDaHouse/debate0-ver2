@@ -21,6 +21,15 @@ document.body.addEventListener("click", function (e) {
 });
 
 document.body.addEventListener("click", function (e) {
+    if (e.target.classList.contains("link_button")) {  
+		var father = this;
+		var card = father.getElementsByClassName("card")[0];
+		var speech = card.getElementsByClassName("speech")[0];
+			speech.classList.toggle("invisible");
+    }
+});
+
+document.body.addEventListener("click", function (e) {
     if (e.target.classList.contains("lvl1blue")) {
         var div = document.createElement("div");
         var father = e.path[5];
