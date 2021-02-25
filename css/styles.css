@@ -45,10 +45,14 @@ body {
 body .card {
   position: relative;
   height: 150px;
-  width: 250px;
+  width: 300px;
   display: inline-block;
   z-index: 99999999 !important;
   transition: all 0.3s ease;
+}
+
+.in-kod + .in-kod {
+  margin-top: 10rem;
 }
 
 body .card .multi-button {
@@ -89,12 +93,14 @@ body .card .multi-button button:first-child:nth-last-child(1):nth-child(1),
 body .card .multi-button button:first-child:nth-last-child(1) ~ *:nth-child(1) {
   left: 25%;
   top: 25%;
+  background: blue!important;
 }
 
 body .card .multi-button button:first-child:nth-last-child(2):nth-child(1),
 body .card .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(1) {
   left: 37.5%;
   top: 18.75%;
+  background: red;
 }
 
 body .card .multi-button button:first-child:nth-last-child(2):nth-child(2),
@@ -106,6 +112,12 @@ body .card .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(2) {
 body .card .multi-button button:first-child:nth-last-child(3):nth-child(1),
 body .card .multi-button button:first-child:nth-last-child(3) ~ *:nth-child(1) {
   left: 50%;
+  top: 15.625%;
+}
+
+body .card .multi-button button:first-child:nth-last-child(4):nth-child(1),
+body .card .multi-button button:first-child:nth-last-child(4) ~ *:nth-child(1) {
+  left: 66%;
   top: 15.625%;
 }
 
@@ -412,7 +424,7 @@ body .card .multi-button:focus-within {
   position: absolute;
   width: 10px;
   height: 50%;
-  left: 10px;
+  left: -20px;
 }
 
 .curly-braced-block .brace-left .brace-top {
@@ -474,4 +486,76 @@ body .card .multi-button:focus-within {
   text-align: left;
   width: 300px;
   margin-left: 25px;
+}
+
+.curly-braced-block .brace-right {
+  top: 0;
+  left: 0;
+  float: left;
+  width: 20px;
+  height: 100%;
+  position: absolute;
+}
+
+.curly-braced-block .brace-right .brace-top-right,
+.curly-braced-block .brace-right .brace-bottom-right {
+  position: absolute;
+  width: 10px;
+  height: 50%;
+  left: 10px;
+}
+
+.curly-braced-block .brace-right .brace-top-right {
+  top: 0;
+}
+
+.curly-braced-block .brace-right .brace-bottom-right {
+  top: 50%;
+}
+
+.curly-braced-block .brace-right .brace-top-right:before,
+.curly-braced-block .brace-right .brace-top-right:after,
+.curly-braced-block .brace-right .brace-bottom-right:before,
+.curly-braced-block .brace-right .brace-bottom-right:after {
+  content: "";
+  height: 50%;
+  width: 10px;
+  display: block;
+  position: absolute;
+}
+
+.curly-braced-block .brace-right .brace-top-right:before {
+  top: 0;
+  left: 0;
+  border-left: 3px solid black;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+}
+
+.curly-braced-block .brace-right .brace-top-right:after {
+  bottom: 0;
+  left: -10px;
+  border-right: 3px solid black;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.curly-braced-block .brace-right .brace-bottom-right:before {
+  top: 0;
+  left: -10px;
+  border-right: 3px solid black;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+}
+
+.curly-braced-block .brace-right .brace-bottom-right:after {
+  bottom: 0;
+  left: 0;
+  border-left: 3px solid black;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
 }
