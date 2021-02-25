@@ -5,29 +5,13 @@ function change_color(elem, color) {
 }
 
 document.body.addEventListener("click", function (e) {
-    if (e.target.classList.contains("btn")) {
-        let div = document.createElement("div"),
-            father = e.path[5];
-        div.classList = father.classList;
-        div.style.left = father.offsetLeft + distance + "px";
-        div.style.top = father.offsetTop + "px";
-
-        let arrow_width = distance - father.offsetWidth;
-        div.innerHTML =
-            father.innerHTML +
-            `<div class='arrow' style='left: ${-arrow_width}px;width:${arrow_width}px;'></div>`;
-        document.body.append(div);
-    }
-});
-
-document.body.addEventListener("click", function (e) {
     if (e.target.classList.contains("lvl1")) {
         var div = document.createElement("div");
         var father = e.path[5];
         var col = document.getElementsByClassName('col')[8];
 		var content = col.getElementsByClassName('content')[0];
-		content.appendChild(div);
-        div.classList = father.classList;
+			content.appendChild(div);
+        	div.classList = father.classList;
 
 
         let arrow_width = distance - father.offsetWidth;
@@ -35,32 +19,39 @@ document.body.addEventListener("click", function (e) {
             father.innerHTML +
             `<div class='arrow' style='right: ${-arrow_width}px;width:${arrow_width}px;'><div></div></div>`;
         
-            var lvl = div.getElementsByClassName('lvl1')[0];
-            lvl.classList.add("lvl2");
-            lvl.classList.remove("lvl1");
-            div.classList.remove("col");
+        var lvl = div.getElementsByClassName('lvl1')[0];
+			lvl.classList.add("lvl2right");
+			lvl.classList.add("lvl2");
+			lvl.classList.remove("lvl1right");
+			lvl.classList.remove("lvl2");
+			div.classList.remove("col");
+
     }
 });
 
 document.body.addEventListener("click", function (e) {
-    if (e.target.classList.contains("lvl2")) {
+    if (e.target.classList.contains("lvl1right")) {
         var div = document.createElement("div");
         var father = e.path[5];
-            col = document.getElementsByClassName('col')[6];
-            col.appendChild(div);
-        div.classList = father.classList;
-
+        var col = document.getElementsByClassName('col')[12];
+		var content = col.getElementsByClassName('content')[0];
+			content.appendChild(div);
+        	div.classList = father.classList;
 
         let arrow_width = distance - father.offsetWidth;
         div.innerHTML =
             father.innerHTML +
-            `<div class='arrow' style='right: ${-arrow_width}px;width:${arrow_width}px;'></div>`;
+            `<div class='arrow' style='right: ${-arrow_width}px;width:${arrow_width}px;'><div></div></div>`;
         
-            var lvl = div.getElementsByClassName('lvl2')[0];
-            lvl.classList.add("lvl3");
-            lvl.classList.remove("lvl2");
+        var lvl = div.getElementsByClassName('lvl1')[0];
+            lvl.classList.add("lvl2right");
+			lvl.classList.add("lvl2");
+            lvl.classList.remove("lvl1right");
+			lvl.classList.remove("lvl2");
             div.classList.remove("col");
-                    div.style.top = father.offsetTop + 250 + "px";
-
+			
+		var card = div.getElementsByClassName('card')[0];
+            card.classList.add("purple");
+            card.classList.remove("blue");
     }
 });
