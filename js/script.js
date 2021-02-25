@@ -24,8 +24,9 @@ document.body.addEventListener("click", function (e) {
     if (e.target.classList.contains("lvl1")) {
         var div = document.createElement("div");
         var father = e.path[5];
-            col = document.getElementsByClassName('col')[8];
-            col.appendChild(div);
+        var col = document.getElementsByClassName('col')[8];
+		var content = col.getElementsByClassName('content')[0];
+		content.appendChild(div);
         div.classList = father.classList;
 
 
