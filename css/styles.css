@@ -5,7 +5,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.fa {
+.fa,
+.fas {
   pointer-events: none;
 }
 
@@ -220,7 +221,8 @@ body .card .multi-button:focus-within {
 }
 
 .invisible {
-  display: none !important;
+  opacity: 0;
+  transform: all 1s;
 }
 
 .optionsmenu {
@@ -352,13 +354,18 @@ body .card .multi-button:focus-within {
 .arguments {
   z-index: 9999999999;
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 80%;
   bottom: 0;
   background: transparent;
   color: white;
   font-weight: bolder;
   letter-spacing: 2;
+  border: none;
+}
+
+.arguments:focus{
+  outline:0
 }
 
 .add {
@@ -579,5 +586,77 @@ body .card .multi-button:focus-within {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
 
+.speech {
+	position: absolute;
+  margin-top: -150px;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	background-color: #fff;
+	border: 8px solid #666;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: 2px 2px 4px #888;
+	-moz-box-shadow: 2px 2px 4px #888;
+	box-shadow: 2px 2px 4px #888;
+  z-index: 999999999;
+  right: 0;
+}
+
+.speech:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+	top: 100px;
+	border: 25px solid;
+	border-color: #666 transparent transparent #666;
+}
+
+.speech:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+	top: 100px;
+	border: 15px solid;
+	border-color: #fff transparent transparent #fff;
+}
+
+.speech textarea {
+  width: 90%;
+}
+
+.hide_block {
+  animation:hide_animation 1s;
+}
+
+@keyframes hide_animation {
+  from { 
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.show_block {
+  animation:show_animation 1s;
+}
+
+@keyframes show_animation {
+  from { 
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
