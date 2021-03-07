@@ -583,9 +583,12 @@ body .card .multi-button:focus-within {
 }
 
 .cardheader_button {
-  border-radius: 50%;
+  border-radius: 100%;
+  border: 1px solid #000;
   width: 40px;
   height: 40px;
+  margin-top: -15px;
+  text-align: center;
 }
 
 .speech {
@@ -633,30 +636,6 @@ body .card .multi-button:focus-within {
   width: 90%;
 }
 
-.hide_block {
-  animation:hide_animation 1s;
-}
-
-@keyframes hide_animation {
-  from { 
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-.show_block {
-  animation:show_animation 1s;
-}
-
-@keyframes show_animation {
-  from { 
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.active {
+  color: #3f72c3;
 }
