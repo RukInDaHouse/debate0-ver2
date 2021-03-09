@@ -24,6 +24,10 @@ function addBlueBox(e) {
     div.classList.remove("col");
 };
 
+function change_color(elem, color) {
+    elem.parentElement.style.background = color;
+}
+
 function zoomIn(e){
 
 	let father = this.parentElement.parentElement.parentElement.parentElement;
