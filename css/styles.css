@@ -61,7 +61,7 @@ body .card {
 }
 
 .in-kod + .in-kod {
-  margin-top: 10rem;
+  margin-top: 60px;
 }
 
 body .card .multi-button {
@@ -239,13 +239,10 @@ body .card .multi-button:focus-within {
 
 .col {
   position: absolute;
-  height: 100%;
+  height: 3300px;
   top: 0;
   bottom: 0;
   width: 300px;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
 }
 
 .col {
@@ -415,8 +412,9 @@ body .card .multi-button:focus-within {
 }
 
 .container {
-  height: 1700px;
+  height: 3300px;
   width: 3400px;
+  background: #000;
 }
 
 .wrapper {
@@ -508,6 +506,10 @@ body .card .multi-button:focus-within {
   text-align: left;
   width: 300px;
   margin-left: 25px;
+}
+
+.content {
+  margin-top: 100px;
 }
 
 .curly-braced-block .brace-right {
