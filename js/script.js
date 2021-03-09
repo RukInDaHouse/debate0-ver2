@@ -24,7 +24,7 @@ function addBlueBox(e) {
     div.classList.remove("col");
 };
 
-function change_color(elem, color) {
+function changeColor(elem, color) {
     elem.parentElement.style.background = color;
 }
 
@@ -33,7 +33,6 @@ function zoomIn(e){
 	let father = this.parentElement.parentElement.parentElement.parentElement;
 	var card = father.getElementsByClassName("card")[0];
   		card.style.height = card.offsetHeight + 50 + 'px';
-  		card.style.width = card.offsetWidth + 50 + 'px';
 }
 
 function zoomOut(e){
@@ -41,7 +40,6 @@ function zoomOut(e){
 	let father = this.parentElement.parentElement.parentElement.parentElement;
 	var card = father.getElementsByClassName("card")[0];
 		card.style.height = card.offsetHeight - 50 + 'px';
-		card.style.width = card.offsetWidth - 50 + 'px';
 }
 
 function linkButton(e){
@@ -76,3 +74,17 @@ let likebuttons = document.getElementsByClassName('like_button');
 [...likebuttons].forEach(button=>button.addEventListener("click", likeButton));
 
 
+var zoom = 1;
+var zoomStep = 0.2;
+
+document.getElementById("zoomIn").addEventListener("click", function() {
+    zoom += zoomStep;
+    document.getElementById("zoomtext").style.transform = "scale(" + zoom + ")";
+});
+	
+document.getElementById("zoomOut").addEventListener("click", function() {
+    if (zoom > zoomStep) {
+    zoom -= zoomStep;
+    document.getElementById("zoomtext").style.transform = "scale(" + zoom + ")";
+    }
+});
